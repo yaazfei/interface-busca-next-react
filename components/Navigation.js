@@ -1,71 +1,110 @@
 const Navigation = ({ settings }) => (
 
-  <header className="w-full bg-white header-y">
 
-    <a href="/">
-      <svg width="69" height="66" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path fill="#FFF" d="M-149-98h1440v938H-149z" /><path d="M37.555 66c17.765 0 27.051-16.38 30.24-33.415C70.986 15.549 52.892 4.373 35.632.52 18.37-3.332 0 14.876 0 32.585 0 50.293 19.791 66 37.555 66z" fill="#000" /><path d="M46.366 42.146a5.55 5.55 0 01-1.948 2.043c-.86.557-1.811 1.068-2.898 1.3-1.087.279-2.265.511-3.487.511H22V20h18.207c.905 0 1.675.186 2.4.604a6.27 6.27 0 011.811 1.485 7.074 7.074 0 011.54 4.504c0 1.207-.317 2.368-.905 3.482a5.713 5.713 0 01-2.718 2.507c1.45.418 2.582 1.16 3.442 2.229.815 1.114 1.223 2.553 1.223 4.364 0 1.16-.226 2.136-.68 2.971h.046z" fill="#FFF" /></g></svg>
+
+
+<nav className="bg-red-900">
+
+<nav className="flex items-center justify-between flex-wrap bg-red-900 p-4 fixed w-full z-10 top-0">
+  <div className="flex items-center flex-shrink-0 text-white mr-6">
+  <svg className="svg-icon" viewBox="0 0 20 20">
+          <path fill="none" d="M19.629,9.655c-0.021-0.589-0.088-1.165-0.21-1.723h-3.907V7.244h1.378V6.555h-2.756V5.866h2.067V5.177h-0.689V4.488h-1.378V3.799h0.689V3.11h-1.378V2.421h0.689V1.731V1.294C12.88,0.697,11.482,0.353,10,0.353c-5.212,0-9.446,4.135-9.629,9.302H19.629z M6.555,2.421c1.522,0,2.756,1.234,2.756,2.756S8.077,7.933,6.555,7.933S3.799,6.699,3.799,5.177S5.033,2.421,6.555,2.421z"></path>
+          <path fill="none" d="M12.067,18.958h-0.689v-0.689h2.067v-0.689h0.689V16.89h2.067v-0.689h0.689v-0.689h-1.378v-0.689h-2.067v-0.689h1.378v-0.689h2.756v-0.689h-1.378v-0.689h3.218c0.122-0.557,0.189-1.134,0.21-1.723H0.371c0.183,5.167,4.418,9.302,9.629,9.302c0.711,0,1.401-0.082,2.067-0.227V18.958z"></path>
+        </svg>
+        <a className="text-white no-underline hover:text-white hover:no-underline" href="#">
+
+          <span className="text-2xl pl-2"><i className="em em-grinning"></i>Busca Filmes</span>
     </a>
-    <h1>Site Name</h1>
+  </div>
 
-    <nav className="nav-y">
-      <a href="/">Home</a>
-      <a href="/">Movies</a>
-      <a href="/">About</a>
-    </nav>
+  <div className="block lg:hidden">
+    <button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+      <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
 
-  </header>
+  <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content1">
+        <ul className="list-reset lg:flex justify-end flex-1 items-center">
+          <li className="mr-3">
+            <a className="inline-block py-2 px-4 text-white no-underline" href="/">Início</a>
+          </li>
+          <li className="mr-3">
+            <a className="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4" href="http://www.omdbapi.com">OMDB</a>
+          </li>
+          <li className="mr-3">
+            <a className="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4" href="#">Lista</a>
+          </li>
+          <li className="mr-3">
+            <a className="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4" href="#">Sobre</a>
+          </li>
+        </ul>
+      </div>
+</nav>
+
+<div className="container shadow-lg mx-auto bg-gray-300 mt-20 md:mt-18">
+
+</div>
+
+
+
+{/*
+<body>
+<script>
+  document.getElementById('nav-toggle').onclick = function(){
+    document.getElementById("nav-content1").classList.toggle("hidden")
+    }
+</script> 
+</body>
+*/}
+
+
+
+</nav>
 
 
 
 
-  // <header className="w-full bg-white">
 
-  //   <nav className="" role="navigation">
-  //     <div className="container mx-auto p-4 flex flex-wrap items-center md:flex-no-wrap">
-  //       <div className="mr-4 md:mr-8">
-  //         <a href="/">
-  //           <svg width="69" height="66" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path fill="#FFF" d="M-149-98h1440v938H-149z" /><path d="M37.555 66c17.765 0 27.051-16.38 30.24-33.415C70.986 15.549 52.892 4.373 35.632.52 18.37-3.332 0 14.876 0 32.585 0 50.293 19.791 66 37.555 66z" fill="#000" /><path d="M46.366 42.146a5.55 5.55 0 01-1.948 2.043c-.86.557-1.811 1.068-2.898 1.3-1.087.279-2.265.511-3.487.511H22V20h18.207c.905 0 1.675.186 2.4.604a6.27 6.27 0 011.811 1.485 7.074 7.074 0 011.54 4.504c0 1.207-.317 2.368-.905 3.482a5.713 5.713 0 01-2.718 2.507c1.45.418 2.582 1.16 3.442 2.229.815 1.114 1.223 2.553 1.223 4.364 0 1.16-.226 2.136-.68 2.971h.046z" fill="#FFF" /></g></svg>
-  //         </a>
-  //       </div>
-  //       <div className="text-black">
-  //         <p className="text-lg">FILMES</p>
-  //         <p>Omdb Filmes</p>
-  //       </div>
-  //       <div className="ml-auto md:hidden">
-  //         <button
-  //           className="flex items-center px-3 py-2 border rounded"
-  //           type="button"
-  //         >
-  //           <svg
-  //             className="h-3 w-3"
-  //             viewBox="0 0 20 20"
-  //             xmlns="http://www.w3.org/2000/svg"
-  //           >
-  //             <title>Menu</title>
-  //             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-  //           </svg>
 
-  //         </button>
-  //       </div>
-  //       <div className="w-full md:w-auto md:flex-grow md:flex md:items-center">
-  //         <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 md:ml-auto lg:mr-8 md:border-0">
-  //           <li>
-  //             <a href="/" className="block px-4 py-1 md:p-2 lg:px-8">Home</a>
-  //           </li>
-  //           <li>
-  //             <a href="/" className="block px-4 py-1 md:p-2 lg:px-8">About</a>
-  //           </li>
-  //         </ul>
-  //       </div>
+
+
+
+
+
+
+  //   <nav className="flex items-center justify-between flex-wrap bg-red-900 p-6">
+  //   <div className="flex items-center flex-no-shrink text-white mr-6">
+  //   <svg className="svg-icon" viewBox="0 0 20 20">
+  // 							<path fill="none" d="M19.629,9.655c-0.021-0.589-0.088-1.165-0.21-1.723h-3.907V7.244h1.378V6.555h-2.756V5.866h2.067V5.177h-0.689V4.488h-1.378V3.799h0.689V3.11h-1.378V2.421h0.689V1.731V1.294C12.88,0.697,11.482,0.353,10,0.353c-5.212,0-9.446,4.135-9.629,9.302H19.629z M6.555,2.421c1.522,0,2.756,1.234,2.756,2.756S8.077,7.933,6.555,7.933S3.799,6.699,3.799,5.177S5.033,2.421,6.555,2.421z"></path>
+  // 							<path fill="none" d="M12.067,18.958h-0.689v-0.689h2.067v-0.689h0.689V16.89h2.067v-0.689h0.689v-0.689h-1.378v-0.689h-2.067v-0.689h1.378v-0.689h2.756v-0.689h-1.378v-0.689h3.218c0.122-0.557,0.189-1.134,0.21-1.723H0.371c0.183,5.167,4.418,9.302,9.629,9.302c0.711,0,1.401-0.082,2.067-0.227V18.958z"></path>
+  // 	</svg>
+  //     <span className="font-semibold text-xl tracking-tight">Busca Filmes</span>
+  //   </div>
+  //   <div className="block lg:hidden">
+  //     <button className="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+  //       <svg className="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+  //     </button>
+  //   </div>
+  //   <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+  //     <div className="text-sm lg:flex-grow">
+  //       <a href="http://www.omdbapi.com" className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+  //         OMDB
+  //       </a>
+  //       <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+  //         Lista
+  //       </a>
+  //       <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
+  //         Sobre
+  //       </a>
   //     </div>
-  //   </nav>
-
-  // </header>
-
+  //     <div>
+  //       <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0">Download</a>
+  //     </div>
+  //   </div>
+  // </nav> */}
 
 
 
 
 )
-
 export default Navigation

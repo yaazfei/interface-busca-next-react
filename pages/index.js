@@ -8,7 +8,7 @@ import SearchTitle from '../components/SearchTitle'
 
 export default function Index() {
 
-    const [searchTerm, setSearchTerm] = useState("Christ");
+    const [searchTerm, setSearchTerm] = useState("Mad_Max");
 
     const search = value => {
         console.log('search()' + value)
@@ -28,7 +28,7 @@ export default function Index() {
         <Layout>
           <Container>
             <SearchTitle searchTerm={searchTerm} search={search} />
-            <div className="container mx-auto p-16 text-center">
+            <div className="container mx-auto p-16 content-center">
               <Movie key={data.imdbID} movie={data} />
             </div>
           </Container>

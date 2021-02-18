@@ -1,4 +1,4 @@
 export default function Container({ children }) {
-    return <div className="container mx-auto px-5 p-16">{children}</div>
+    return <div className="container mx-auto px-5 pt-16 content-center">{children}</div>
   }
   
